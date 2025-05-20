@@ -121,3 +121,26 @@
     .submenu .con-submenu>a::after {
         content: "▶";
     }
+
+        .main {
+        background-color: rgb(255, 255, 255);
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main h2 {
+        padding-top: 20px;
+        color: rgb(1, 53, 53);
+        font-size: 40px;
+    }
+
+    .texto {
+        margin-top: 20px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(225, 253, 253);
+        padding: 50px;
+    }

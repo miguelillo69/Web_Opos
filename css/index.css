@@ -1,0 +1,123 @@
+ * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 150px;
+        background-color: aquamarine;
+        border-bottom: darkcyan 2px solid;
+        color: darkcyan;
+    }
+
+    .imagen img {
+        height: 100px;
+        border-radius: 10px;
+        filter: drop-shadow(5px 5px 5px darkcyan);
+
+    }
+
+    .menu-navegacion {
+        background: darkcyan;
+    }
+
+    .menu-principal {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-principal>li {
+        position: relative;
+        list-style-type: none;
+        margin-bottom: 2px;
+    }
+
+    .menu-principal>li>a {
+        display: block;
+        padding: 15px 25px;
+        color: aquamarine;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .menu-principal>li:hover>a {
+        background: aquamarine;
+        color: darkcyan;
+    }
+
+    .menu-principal>li>a.active {
+        background: aquamarine;
+        font-weight: bold;
+        color: darkcyan;
+        border-bottom: 2px solid #fff;
+    }
+
+    /* Estilos de los submenús */
+    .submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 200px;
+        background: darkcyan;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        z-index: 100;
+        border-radius: 10px;
+    }
+
+    .con-submenu:hover>.submenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .submenu li {
+        position: relative;
+        list-style-type: none;
+    }
+
+    .submenu a {
+        display: block;
+        padding: 12px 20px;
+        color: aquamarine;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        border-radius: 10px;
+
+    }
+
+    .submenu a:hover {
+        background: aquamarine;
+        color: darkcyan;
+    }
+
+    /* Submenús de segundo nivel */
+    .submenu .submenu {
+        top: 0;
+        left: 100%;
+        transform: translateX(10px);
+    }
+
+    .submenu .con-submenu:hover>.submenu {
+        transform: translateX(0);
+    }
+
+    /* Indicador de submenú (opcional) */
+    .con-submenu>a::after {
+        content: "▼";
+        font-size: 10px;
+        margin-left: 5px;
+    }
+
+    .submenu .con-submenu>a::after {
+        content: "▶";
+    }

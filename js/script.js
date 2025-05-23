@@ -1,3 +1,7 @@
+
+const isLocal = location.hostname === 'localhost' || location.protocol === 'file:';
+const BASE_URL = isLocal ? '' : '/Web_Opos/';
+
 document.addEventListener('DOMContentLoaded', function () {
   const menuItems = document.querySelectorAll('.con-submenu');
 
@@ -28,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function loadPage(page) {
-  fetch(`pages/${page}.html`)
+  fetch(`${BASE_URL}pages/${page}.html`)
     .then(res => {
       if (!res.ok) throw new Error("Página no encontrada");
       return res.text();

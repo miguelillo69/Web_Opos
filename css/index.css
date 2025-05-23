@@ -72,6 +72,7 @@
      transition: all 0.3s ease;
      z-index: 100;
      border-radius: 10px;
+     padding-left: 0;
  }
 
  .con-submenu:hover>.submenu {
